@@ -1,0 +1,48 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<style>
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 1rem;
+        width: 50%;
+    }
+
+    .form-control {
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .btn-block {
+        background-color: #4CAF50;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-block:hover {
+    background-color: #45a049;
+    position: relative;
+    bottom: 5px;
+}
+</style>
+<div class="form-container">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn-block" type="submit">Log In</button>
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,148 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    {% load static %}
+    <body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="{% static 'images/load.gif' %}" alt="#"/></div>
+    </div>
+    <!-- end loader -->
+    <div class="brand_color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>All Series</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- brand -->
+    <div class="brand">
+        <div class="container">
+
+        </div>
+        <div class="brand-bg">
+            <div class="container">
+                <div class="row">
+                    {% for mobile in mobile_view %}
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
+                            <div class="brand_box">
+                                <img src="{{ mobile.image.url }}" alt="img"/>
+                                <h3>$<strong class="red">{{ mobile.price }}</strong></h3>
+                                <span>{{ mobile.name }}</span>
+                                <i><img src="{% static 'images/star.png' %}"/></i>
+                                <i><img src="{% static 'images/star.png' %}"/></i>
+                                <i><img src="{% static 'images/star.png' %}"/></i>
+                                <i><img src="{% static 'images/star.png' %}"/></i>
+                                <br>
+                                {#                        <a href="{% url 'post_detail_mobile' mobile.id %}">ادامه مطلب</a>#}
+                                <div>
+                                    <a href="{% url 'post_detail_mobile' mobile.id %}"><button class="btn"><i class="animation"></i>See More<i class="animation"></i>
+                                    </button></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                    {#                </div>#}
+                    {#                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">#}
+                    {#                    <div class="brand_box">#}
+                    {#                        <img src="{% static 'images/2.png' %}" alt="img"/>#}
+                    {#                        <h3>$<strong class="red">100</strong></h3>#}
+                    {#                        <span>Mobile Phone</span>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                    </div>#}
+                    {#                </div>#}
+                    {#                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">#}
+                    {#                    <div class="brand_box">#}
+                    {#                        <img src="{% static 'images/3.png' %}" alt="img"/>#}
+                    {#                        <h3>$<strong class="red">100</strong></h3>#}
+                    {#                        <span>Mobile Phone</span>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                    </div>#}
+                    {#                </div>#}
+                    {#                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">#}
+                    {#                    <div class="brand_box">#}
+                    {#                        <img src="{% static 'images/4.png' %}" alt="img"/>#}
+                    {#                        <h3>$<strong class="red">100</strong></h3>#}
+                    {#                        <span>Mobile Phone</span>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                    </div>#}
+                    {#                </div>#}
+                    {#                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">#}
+                    {#                    <div class="brand_box">#}
+                    {#                        <img src="{% static 'images/5.png' %}" alt="img"/>#}
+                    {#                        <h3>$<strong class="red">100</strong></h3>#}
+                    {#                        <span>Mobile Phone</span>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                    </div>#}
+                    {#                </div>#}
+                    {#                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">#}
+                    {#                    <div class="brand_box">#}
+                    {#                        <img src="{% static 'images/6.png' %}" alt="img"/>#}
+                    {#                        <h3>$<strong class="red">100</strong></h3>#}
+                    {#                        <span>Mobile Phone</span>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                        <i><img src="{% static 'images/star.png' %}"/></i>#}
+                    {#                    </div>#}
+                    <div class="col-md-12">
+                        <a class="read-more">See More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end brand -->
+
+    <!-- Javascript files-->
+    {#<script src="{% static 'js/jquery.min.js' %}"></script>#}
+    {#<script src="{% static 'js/popper.min.js' %}"></script>#}
+    {#<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>#}
+    {#<script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>#}
+    {#<script src="{% static 'js/plugin.js' %}"></script>#}
+    {#<!-- sidebar -->#}
+    {#<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>#}
+    {#<script src="{% static 'js/custom.js' %}"></script>#}
+    {#<!-- javascript -->#}
+    {#<script src="{% static 'js/owl.carousel.js' %}"></script>#}
+    {#<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>#}
+    {#<script>#}
+    {#    $(document).ready(function () {#}
+    {#        $(".fancybox").fancybox({#}
+    {#            openEffect: "none",#}
+    {#            closeEffect: "none"#}
+    {#        });#}
+    {##}
+    {#        $(".zoom").hover(function () {#}
+    {##}
+    {#            $(this).addClass('transition');#}
+    {#        }, function () {#}
+    {##}
+    {#            $(this).removeClass('transition');#}
+    {#        });#}
+    {#    });#}
+    {#</script>#}
+    </body>
+{% endblock content %}
